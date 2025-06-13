@@ -9,7 +9,7 @@ const loadAllProducts = async () => {
         const products = await response.json();
         allProducts = products
         console.log("Productos cargados:",allProducts)
-        renderResults(allProducts)
+        // renderResults(allProducts)
     } catch (error) {
         console.error("Error al cargar productos:", error)
     }
@@ -20,7 +20,7 @@ const getProducts = (query) => {
 
     let filtered = allProducts //uso la lista
     if (!query) {
-        renderResults(filtered) //si no hay texto muestro todo
+        // renderResults(filtered) //si no hay texto muestro todo
         return
     }
     filtered = allProducts.filter(p =>
